@@ -438,7 +438,7 @@ export const ABOUT = {
     { icon: "⬛", label: "플랫폼 구조 설계", desc: "인벤토리·Page API·공통결제 — 한 번 만든 구조가 반복되게." },
     { icon: "⬛", label: "데이터 기반 의사결정", desc: "GA·세션·SQL — 지표에서 문제를 찾고 구조로 답한다." },
     { icon: "⬛", label: "OKR 팀 운영", desc: "5인 CX PO팀, 월 73건+ 티켓, 회고 문화 정착." },
-    { icon: "⬛", label: "AI 워크플로우", desc: "Cursor·Claude Code — 리서치부터 배포까지 직접 연결." },
+    { icon: "⬛", label: "기획-코드-배포 직접 연결", desc: "FE 레포(Bitbucket) 직접 커밋·PR 머지. Cursor·Claude Code로 리서치부터 배포까지 혼자 완결." },
   ],
 };
 
