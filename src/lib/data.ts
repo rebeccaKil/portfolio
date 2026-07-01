@@ -103,6 +103,14 @@ export const CASES: CaseStudy[] = [
       },
       {
         type: "images",
+        label: "프론트 키 플로우 — 개편 전 vs 개편 후",
+        items: [
+          { src: "/images/flow_before.jpg", caption: "개편 전 — 항공·호텔·투어&액티비티 카테고리별 분리 구조. 공통 플로우 없이 결제·예약이 각각 독립 운영됨" },
+          { src: "/images/flow_after.jpg", caption: "개편 후 — 통합 디자인 시스템 기반 와이어프레임. 검색~결제~취소까지 단일 구조로 통합, 컴포넌트 레벨 스펙 포함" },
+        ],
+      },
+      {
+        type: "images",
         label: "어드민 산출물",
         items: [
           { src: "/images/admin_inventory.svg", caption: "인벤토리 콘텐츠 관리 어드민" },
