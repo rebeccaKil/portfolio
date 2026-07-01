@@ -103,65 +103,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* External Validation */}
-        <motion.div
-          variants={reveal}
-          initial={animate ? "hidden" : "visible"}
-          whileInView="visible"
-          viewport={VIEWPORT}
-          className="mb-16 border border-rule overflow-hidden"
-        >
-          {/* Header bar */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-rule bg-paper-2">
-            <span className="text-[0.62rem] font-mono tracking-[0.2em] uppercase text-ink-3">
-              외부 평가 — Convince X · Product Lead 후보자 분석 리포트
-            </span>
-            <div className="flex items-center gap-2">
-              <span
-                className="text-[0.72rem] font-mono font-semibold px-2 py-0.5"
-                style={{ background: "#0f172a", color: "#10b981" }}
-              >
-                A+
-              </span>
-              <span className="text-[0.65rem] text-ink-3 font-mono">Product Lead 적임자</span>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-0">
-            {/* Left: quote */}
-            <div className="p-6 border-b md:border-b-0 md:border-r border-rule flex flex-col justify-center">
-              <p
-                className="text-[0.95rem] font-medium leading-relaxed text-ink mb-4"
-                style={{ letterSpacing: "-0.01em" }}
-              >
-                {ABOUT.validation.quote}
-              </p>
-              <p className="text-[0.82rem] text-ink-2 leading-relaxed">
-                비즈니스 목적에 최적화된 프로덕트 구조(System Architecture)를 설계하는 역량이 탁월합니다. 파편화된 서비스들을 하나의 통합 플랫폼으로 재구축하고, 신규 서비스 런칭 전 과정을 주도했습니다.
-              </p>
-            </div>
-
-            {/* Right: 4 points */}
-            <div className="grid grid-cols-2">
-              {ABOUT.validation.points.map((pt, i) => (
-                <div
-                  key={i}
-                  className="p-4 border-b border-rule"
-                  style={{
-                    borderRight: i % 2 === 0 ? "1px solid var(--color-rule)" : "none",
-                    borderBottom: i < 2 ? "1px solid var(--color-rule)" : "none",
-                  }}
-                >
-                  <p className="text-[0.6rem] font-mono tracking-[0.12em] uppercase mb-1.5" style={{ color: "#e8622a" }}>
-                    {pt.label}
-                  </p>
-                  <p className="text-[0.78rem] text-ink-2 leading-relaxed">{pt.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
         {/* Career — full width */}
         <motion.div
           variants={reveal}
