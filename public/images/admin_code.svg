@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">코드 관리 화면</title>
+  <desc id="desc">인벤토리 코드 트리와 코드 벨류 입력 폼을 표현한 화면 이미지</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #30343b; }
+    .muted { fill: #737b85; }
+    .label { font-size: 17px; font-weight: 800; }
+    .body { font-size: 16px; font-weight: 700; }
+    .small { font-size: 12px; font-weight: 800; }
+    .title { font-size: 28px; font-weight: 900; }
+    .field { fill: #fff; stroke: #d4d8dd; stroke-width: 1.5; }
+    .line { stroke: #e3e6ea; stroke-width: 1; }
+  </style>
+  <rect width="1200" height="720" fill="#f7f9fb"/>
+  <text x="36" y="58" class="title">코드 관리</text>
+  <line x1="36" y1="86" x2="1164" y2="86" class="line"/>
+  <text x="36" y="126" class="body" fill="#bd423d">※ 각 항목에서 마우스 우클릭 시 하위 메뉴 추가, 삭제 할 수 있습니다.</text>
+  <rect x="36" y="150" width="300" height="520" fill="#fff" stroke="#e3e6ea"/>
+  <text x="70" y="190" class="body muted">▾ 📁 미공통 코드 (TICKET_CODE)</text>
+  <text x="94" y="224" class="body muted">▸ 휴가샵 이용권 (VACATION_GIFT)</text>
+  <text x="70" y="258" class="body">▾ 📁 인벤토리 (INVENTORY)</text>
+  <text x="94" y="292" class="body">▾ 📁 투어비스 (TV_IV)</text>
+  <text x="118" y="326" class="body">▾ 📁 공통 (TV_IV_C)</text>
+  <text x="148" y="360" class="body muted">◼ 공통 캘린더 테스트</text>
+  <text x="148" y="394" class="body muted">◼ 공통 픽토그램</text>
+  <text x="148" y="428" class="body muted">◼ 모바일 메인 AD 배너</text>
+  <text x="148" y="462" class="body muted">◼ 공통 배너</text>
+  <text x="148" y="496" class="body muted">◼ 공통 상품/도시</text>
+  <text x="148" y="530" class="body muted">◼ 공통 탭</text>
+  <text x="148" y="564" class="body muted">◼ 공통 쿠폰</text>
+  <text x="148" y="598" class="body muted">◼ 검색페이지 하단 배너</text>
+  <rect x="410" y="156" width="236" height="42" class="field"/>
+  <text x="410" y="142" class="label">코드명</text>
+  <rect x="680" y="156" width="236" height="42" class="field"/>
+  <text x="680" y="142" class="label">코드(code)</text>
+  <rect x="950" y="156" width="210" height="42" class="field"/>
+  <text x="950" y="128" class="label">유니크 코드</text>
+  <rect x="410" y="246" width="506" height="42" class="field"/>
+  <text x="410" y="232" class="label">코드설명</text>
+  <rect x="410" y="336" width="236" height="42" class="field"/>
+  <text x="410" y="322" class="label">코드 벨류1</text>
+  <rect x="680" y="336" width="236" height="42" class="field"/>
+  <text x="680" y="322" class="label">코드 벨류2</text>
+  <rect x="950" y="336" width="210" height="42" class="field"/>
+  <text x="950" y="322" class="label">코드 벨류3</text>
+  <rect x="410" y="426" width="236" height="42" class="field"/>
+  <text x="410" y="412" class="label">코드 벨류4</text>
+  <rect x="680" y="426" width="236" height="42" class="field"/>
+  <text x="680" y="412" class="label">코드 벨류5</text>
+  <rect x="410" y="516" width="236" height="42" class="field"/>
+  <text x="410" y="502" class="label">순서</text>
+  <rect x="680" y="516" width="236" height="42" class="field"/>
+  <text x="680" y="502" class="label">사용여부</text>
+  <text x="704" y="543" class="body muted">Y</text>
+  <rect x="410" y="612" width="42" height="34" rx="4" fill="#6f99bd"/>
+  <text x="424" y="635" class="small" fill="#fff">저장</text>
+  <rect x="462" y="612" width="42" height="34" rx="4" fill="#7db879"/>
+  <text x="476" y="635" class="small" fill="#fff">수정</text>
+</svg>
