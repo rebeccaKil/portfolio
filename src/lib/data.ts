@@ -173,10 +173,17 @@ export const CASES: CaseStudy[] = [
       },
       {
         type: "images",
-        label: "산출물",
+        label: "예약/결제 플로우 설계",
+        items: [
+          { src: "/images/payment_flow.png", caption: "[프론트] 예약·결제 플로우 + [back-end] 서비스 FE → 서비스 API → 통결 FE → 통결 API → PG 시퀀스" },
+        ],
+      },
+      {
+        type: "images",
+        label: "쿠폰 v2 산출물",
         items: [
           { src: "/images/coupon_channel.png", caption: "쿠폰 채널 정책 매트릭스 (투어비스·베네피아·휴가샵·SKT·카이트)" },
-          { src: "/images/coupon_erd.png", caption: "쿠폰 v2 ERD — COUPON_INFLOW_CHANNEL 분리 구조" },
+          { src: "/images/coupon_erd.png", caption: "쿠폰 v2 ERD — COUPON_INFLOW_CHANNEL 분리 구조 (전체 테이블 관계)" },
         ],
       },
       {
