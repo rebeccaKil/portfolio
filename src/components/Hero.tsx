@@ -122,7 +122,7 @@ export default function Hero() {
         >
           <span className="w-6 h-px bg-brand" />
           <span className="text-[0.65rem] font-mono tracking-[0.22em] uppercase text-brand">
-            Product Owner · Travel Commerce · AI Experience
+            Product Owner · Travel &amp; E-commerce · Payments · AI
           </span>
         </motion.div>
 
@@ -140,11 +140,11 @@ export default function Hero() {
             >
               {i === 1 ? (
                 <>
-                  찾아오게 만드는{" "}
+                  개선하고,{" "}
                   <em className="not-italic" style={{ color: "#e8622a" }}>
-                    구조
+                    전환율
                   </em>
-                  를
+                  로
                 </>
               ) : (
                 line

@@ -13,7 +13,7 @@ export default function Team() {
   return (
     <section
       id="team"
-      className="py-24 md:py-32 px-6 md:px-12 lg:px-20 border-t border-rule bg-paper"
+      className="py-16 md:py-24 px-6 md:px-12 lg:px-20 border-t border-rule bg-paper"
     >
       <div className="max-w-6xl mx-auto">
         {/* Label */}

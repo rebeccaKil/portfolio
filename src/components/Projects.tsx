@@ -111,6 +111,57 @@ function Highlight({ eyebrow, body }: { eyebrow: string; body: string }) {
   );
 }
 
+function Roles({ scope, decided, coordinated }: { scope: string; decided: string; coordinated: string }) {
+  const rows = [
+    { k: "담당 범위", v: scope },
+    { k: "결정한 것", v: decided },
+    { k: "조율한 것", v: coordinated },
+  ];
+  return (
+    <div className="border border-rule overflow-hidden">
+      <div className="px-4 py-2.5 border-b border-rule bg-paper-2">
+        <p className="text-[0.62rem] font-mono tracking-[0.12em] uppercase text-ink-3">나의 역할</p>
+      </div>
+      {rows.map((r, i) => (
+        <div
+          key={r.k}
+          className="grid"
+          style={{
+            gridTemplateColumns: "88px 1fr",
+            borderBottom: i < rows.length - 1 ? "1px solid var(--color-rule)" : "none",
+          }}
+        >
+          <div
+            className="px-4 py-3 text-[0.6rem] font-mono tracking-[0.08em] uppercase text-brand"
+            style={{ borderRight: "1px solid var(--color-rule)" }}
+          >
+            {r.k}
+          </div>
+          <div className="px-4 py-3 text-[0.82rem] text-ink-2 leading-relaxed">{r.v}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Tags({ label, items }: { label: string; items: string[] }) {
+  return (
+    <div className="border-t border-rule pt-4">
+      <p className="text-[0.62rem] font-mono tracking-[0.12em] uppercase text-ink-3 mb-2.5">{label}</p>
+      <div className="flex flex-wrap gap-2">
+        {items.map((t) => (
+          <span
+            key={t}
+            className="text-[0.72rem] font-mono px-2.5 py-1 border border-rule text-ink-2 bg-paper-2"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Footnote({ content }: { content: string }) {
   return (
     <p className="text-[0.78rem] text-ink-3 leading-relaxed border-t border-rule pt-3">{content}</p>
@@ -227,6 +278,10 @@ function renderSection(section: CaseSection, accent: string, idx: number) {
       return <InsightBlock key={idx} label={section.label} body={section.body} />;
     case "highlight":
       return <Highlight key={idx} eyebrow={section.eyebrow} body={section.body} />;
+    case "roles":
+      return <Roles key={idx} scope={section.scope} decided={section.decided} coordinated={section.coordinated} />;
+    case "tags":
+      return <Tags key={idx} label={section.label} items={section.items} />;
     case "footnote":
       return <Footnote key={idx} content={section.content} />;
     case "table":
