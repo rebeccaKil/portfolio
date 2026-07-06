@@ -149,7 +149,7 @@ export const CASES: CaseStudy[] = [
     id: "payment-recovery",
     eyebrow: "02 — 결제 백지화면 개선",
     title: "결제 이탈, 속도가 아니라 '인지'의 문제였다",
-    sub: "문제 정의 · 가설 수립 · 대안 트레이드오프 결정 · 정책 정의·스펙 작성 · 2022",
+    sub: "문제 정의 · 가설 수립 · 대안 트레이드오프 결정 · 정책 정의·스펙 작성 · 2024",
     accent: "#0ea5e9",
     sections: [
       {
@@ -304,7 +304,7 @@ export const CASES: CaseStudy[] = [
     id: "ability-reward",
     eyebrow: "04 — 행동 설계",
     title: "고객이 행동하게 만드는 구조 — Ability · Reward",
-    sub: "찜·장바구니 신규 설계 · 포인트 리워드 · KPI 정의 · Claude Code PRD 자동화 · 기획 완료, 개발 설계 단계 · 2026.09 오픈 목표",
+    sub: "찜·장바구니 신규 설계 · 포인트 리워드 · KPI 정의 · Claude Code PRD 자동화 · 기획 완료, 개발 설계 단계 · 2026 — 현재 (2026.09 오픈 목표)",
     accent: "#10b981",
     sections: [
       {
