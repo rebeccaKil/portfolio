@@ -212,7 +212,7 @@ export const CASES: CaseStudy[] = [
     id: "payment",
     eyebrow: "03 — 통합결제 구축",
     title: "결제를 카테고리에서 분리하기",
-    sub: "정책 정의 · 스펙 작성 · 결제 아키텍처 협업 설계 · 쿠폰 정책 v2 · 취소·환불 설계 · 2022 — 2023",
+    sub: "정책 정의 · 스펙 작성 · 결제 아키텍처 협업 설계 · 쿠폰 정책 v2 · 취소·환불 설계 · 2023 — 2024",
     accent: "#6366f1",
     sections: [
       {
@@ -401,7 +401,7 @@ export const CASES: CaseStudy[] = [
     id: "ax-unit",
     eyebrow: "05 — AX 유닛 PO",
     title: "AI 기반 업무 전환(AX) 유닛 PO — 결제·회원·전시·투티·쿠폰",
-    sub: "결제·회원·전시·투티·쿠폰 전 영역 · OKR 수립·운영 · 투티 스쿼드 6개월 → AX 유닛 · 2025 — 현재",
+    sub: "결제·회원·전시·투티·쿠폰 전 영역 · OKR 수립·운영 · 투티 스쿼드 6개월 → AX 유닛 · 2026 — 현재",
     accent: "#e8622a",
     sections: [
       {
