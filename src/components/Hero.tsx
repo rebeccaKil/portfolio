@@ -134,7 +134,7 @@ export default function Hero() {
               variants={fadeUp}
               initial={animate ? "hidden" : "visible"}
               animate="visible"
-              custom={0.2 + i * 0.1}
+              custom={0.12 + i * 0.07}
               className="text-white font-semibold leading-tight tracking-tight"
               style={{ fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)" }}
             >
@@ -158,9 +158,9 @@ export default function Hero() {
           variants={fadeUp}
           initial={animate ? "hidden" : "visible"}
           animate="visible"
-          custom={0.5}
+          custom={0.35}
           className="max-w-[560px] text-[0.95rem] leading-relaxed mb-10"
-          style={{ color: "rgba(255,255,255,0.55)" }}
+          style={{ color: "rgba(255,255,255,0.62)" }}
         >
           {HERO.subtext}
         </motion.p>
@@ -170,7 +170,7 @@ export default function Hero() {
           variants={fadeUp}
           initial={animate ? "hidden" : "visible"}
           animate="visible"
-          custom={0.6}
+          custom={0.45}
           className="flex flex-wrap gap-3 mb-16"
         >
           <a
@@ -219,7 +219,7 @@ export default function Hero() {
               variants={fadeUp}
               initial={animate ? "hidden" : "visible"}
               animate="visible"
-              custom={0.7 + i * 0.2}
+              custom={0.55 + i * 0.12}
               className="pt-6 pr-8 pb-2"
               style={{
                 borderRight: i < 2 ? "1px solid rgba(255,255,255,0.1)" : "none",
@@ -231,10 +231,10 @@ export default function Hero() {
               >
                 <CountUp target={stat.value} inView={statsVisible} />
               </div>
-              <div className="text-[0.62rem] font-mono tracking-[0.1em] uppercase mb-1" style={{ color: "rgba(255,255,255,0.4)" }}>
+              <div className="text-[0.62rem] font-mono tracking-[0.1em] uppercase mb-1" style={{ color: "rgba(255,255,255,0.55)" }}>
                 {stat.label}
               </div>
-              <div className="text-[0.78rem]" style={{ color: "rgba(255,255,255,0.25)" }}>
+              <div className="text-[0.78rem]" style={{ color: "rgba(255,255,255,0.42)" }}>
                 {stat.sub}
               </div>
             </motion.div>
