@@ -2,8 +2,8 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { HERO } from "@/lib/data";
+import { fadeUp as makeFadeUp } from "@/lib/motion";
 import { useEffect, useRef, useState } from "react";
-import type { Variants, Transition } from "framer-motion";
 
 function CountUp({
   target,
@@ -19,14 +19,16 @@ function CountUp({
   const prefix = num !== null ? target.slice(0, target.indexOf(numMatch![0])) : "";
   const suffix = num !== null ? target.slice(target.indexOf(numMatch![0]) + numMatch![0].length) : "";
 
-  const [display, setDisplay] = useState(
-    num !== null ? (Number.isInteger(num) ? String(Math.round(num)) : num.toFixed(1)) : target
-  );
+  const finalDisplay =
+    num !== null ? (Number.isInteger(num) ? String(Math.round(num)) : num.toFixed(1)) : target;
+
+  const [display, setDisplay] = useState(finalDisplay);
   const rafRef = useRef<number | null>(null);
   const startRef = useRef<number | null>(null);
+  const prefersReduced = useReducedMotion();
 
   useEffect(() => {
-    if (!inView || num === null) return;
+    if (!inView || num === null || prefersReduced) return;
     startRef.current = null;
 
     const animate = (ts: number) => {
@@ -42,22 +44,13 @@ function CountUp({
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [inView, num, duration]);
+  }, [inView, num, duration, prefersReduced]);
 
   if (num === null) return <span>{target}</span>;
   return <span>{prefix}{display}{suffix}</span>;
 }
 
-const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (delay: number = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: EASE, delay } as Transition,
-  }),
-};
+const fadeUp = makeFadeUp(0.7);
 
 export default function Hero() {
   const prefersReduced = useReducedMotion();
@@ -87,17 +80,23 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         aria-hidden
       >
-        <div
+        <motion.div
           className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full opacity-[0.07]"
           style={{
             background: "radial-gradient(circle, #e8622a 0%, transparent 70%)",
+            willChange: "transform",
           }}
+          animate={prefersReduced ? undefined : { x: [0, -24, 0], y: [0, 18, 0] }}
+          transition={{ duration: 22, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
         />
-        <div
+        <motion.div
           className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full opacity-[0.05]"
           style={{
             background: "radial-gradient(circle, #6366f1 0%, transparent 70%)",
+            willChange: "transform",
           }}
+          animate={prefersReduced ? undefined : { x: [0, 20, 0], y: [0, -22, 0] }}
+          transition={{ duration: 28, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
         />
         {/* Subtle grid */}
         <div
@@ -175,18 +174,10 @@ export default function Hero() {
         >
           <a
             href="#work"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-sm text-sm font-medium tracking-wide transition-[transform,box-shadow] duration-[160ms] ease-out will-change-transform hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(232,98,42,0.35)] active:scale-[0.98] active:translate-y-0"
             style={{
               background: "#e8622a",
               color: "white",
-              boxShadow: "0 0 0 0 rgba(232,98,42,0.4)",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.boxShadow =
-                "0 8px 24px rgba(232,98,42,0.35)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.boxShadow = "none";
             }}
           >
             프로젝트 보기
@@ -196,7 +187,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-sm text-sm font-medium tracking-wide transition-transform duration-[160ms] ease-out hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0"
             style={{
               border: "1px solid rgba(255,255,255,0.2)",
               color: "rgba(255,255,255,0.8)",
