@@ -408,6 +408,7 @@ export const CASES: CaseStudy[] = [
         type: "impacts",
         items: [
           { value: "5.7%", label: "버스투어 CTR", desc: "클릭→구매 전환 4.6%. 노출 7,732 → 클릭 438 → 구매 20건. 데이터 기반 추천군 재편." },
+          { value: "4.72%", label: "투티 도시 페이지 구매율", desc: "후쿠오카 도시 페이지 신규 구성. 상세 진입률 73.6%. 오픈 후 약 1주 데이터." },
           { value: "4개", label: "AI 직접 배포", desc: "Cursor·Claude Code·Codex·Gemini — 기획·코드·DB·배포 전 단계 AI 활용." },
         ],
       },
@@ -450,6 +451,11 @@ export const CASES: CaseStudy[] = [
             title: "",
             body: "루씬 → ES Cloud 검색 전환 완료. 후기 AI 자동 요약으로 베스트 리뷰 노출 464→674건. 네이버 키워드 순위 대시보드로 개선 사이클 단축.",
           },
+          {
+            eyebrow: "투티 도시 페이지 · 전환 검증",
+            title: "",
+            body: "투티 도시 결과 페이지 개선안을 후쿠오카 대상으로 직접 구현·배포. Case 01에서 설계한 사내 Page API로 상품 구성을 운영 가능하게 두고, 개발 리소스를 길게 잡기 전에 실제 트래픽으로 구매 전환을 검증했습니다.",
+          },
         ],
       },
       {
@@ -466,7 +472,7 @@ export const CASES: CaseStudy[] = [
       {
         type: "insight",
         label: "AI로 검증과 커뮤니케이션의 속도를 높이다",
-        body: "Cursor·Claude Code로 인터랙티브 목업·프로토타입을 직접 만들어 개발 착수 전에 정책과 엣지케이스를 검증하고, 개발·디자인과의 논의 사이클을 단축합니다. Bitbucket 브랜치 관리·코드 리뷰, Vercel 배포, Supabase PostgreSQL DB 구축까지 — 사내 도구 수준의 서비스는 직접 구현·배포한 경험이 있습니다. 배포는 개발팀 확인을 거쳐 진행하고, 배포 후에는 모든 프로젝트에 Slack 장애 알림을 설정해 주기적으로 모니터링합니다.",
+        body: "Cursor·Claude Code로 인터랙티브 목업·프로토타입을 직접 만들어 개발 착수 전에 정책과 엣지케이스를 검증하고, 개발·디자인과의 논의 사이클을 단축합니다. Bitbucket 브랜치 관리·코드 리뷰, Vercel 배포, Supabase PostgreSQL DB 구축까지 — 사내 도구 수준의 서비스는 직접 구현·배포한 경험이 있습니다. 배포는 개발팀 확인을 거쳐 진행하고, 배포 후에는 모든 프로젝트에 Slack 장애 알림을 설정해 주기적으로 모니터링합니다. 투티 후쿠오카 도시 페이지가 대표적인 사례로, 사내 Page API 위에 직접 구현해 실제 트래픽에 붙이고 전환 데이터로 개선 방향을 확인했습니다.",
       },
       {
         type: "images",
